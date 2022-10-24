@@ -152,7 +152,7 @@ install_npm_deps() {
 }
 
 install_yarn_deps() {
-  yarn install --check-files --cache-folder $cache_dir/yarn-cache --pure-lockfile 2>&1
+  yarn install --cache-folder $cache_dir/yarn-cache --pure-lockfile 2>&1
 }
 
 install_bower_deps() {
