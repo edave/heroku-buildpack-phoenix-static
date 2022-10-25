@@ -152,7 +152,8 @@ install_npm_deps() {
 }
 
 install_yarn_deps() {
-  export YARN_CACHE_FOLDER=$cache_dir/yarn-cache
+  export YARN_CACHE_FOLDER=$cache_dir/.yarn
+  cp -R .yarn $cache_dir
   info "Yarn install, cache folder: $YARN_CACHE_FOLDER"
   yarn install 2>&1
 }
